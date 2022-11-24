@@ -1,4 +1,16 @@
 ---
+const pageTitle = 'about me'
+
+const identity = {
+  firstName: "Sarah",
+  country: "Canada",
+  occupation: "Technical Writer",
+  hobbies: ["photography", "birdwatching", "baseball"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const happy = true
+const finished = false
 ---
 
 <html lang="en">
@@ -7,13 +19,27 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro - about</title>
+		<title>Astro - {pageTitle}</title>
 	</head>
 	<body>
         <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/blog/">Blog</a>
-		<h1>my name is shishijian</h1>
+		<h1>{pageTitle}</h1>
 		<p>this is what i really want to do below the list</p>
+        <ul>
+            <li>My name is {identity.firstName}</li>
+            {
+                identity.hobbies.length >= 2 &&
+                <li> two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]} </li>
+            }
+        </ul>
+        <p>These my skills</p>
+        <ul>
+            { skills.map(skill => <li>{skill}</li>) }
+        </ul>
+        { happy && <p>i'm happy</p> }
+        { finished ? <p>i'm finished my work yesterday</p> : <p>i'm not finished my work yesterday</p> }
+        { <p>i'm {!finished && 'not'} finished my work yesterday</p>}
 	</body>
 </html>
