@@ -10,3 +10,4 @@ pubDate: 2022-08-08
 tags: ["house",]
 ---
 This post should show up that `getStaticPaths` function return a list of objects containing page route params and props that you want passed to your pages
+## New Title
