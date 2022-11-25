@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: My Fifth Blog Post
 author: Astro learner
-description: 'You will got everything you need in this tutorial'
+description: 'You will got everything you need in this tutoriallll'
 image:
   url: "https://astro.build/assets/hero_NkT0b.avif"
   alt: "Earth seen from space."
